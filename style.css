@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(10, 10, 10);
+    font-family: Noto Sans KR;
+}
+
+.skills {
+    background-color: white;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.skills h1 {
+    margin-top: 70px;
+    font-size: 50px;
+}
+
+.skills p {
+    font-size: 20px;
+    color: #9e9e9e;
+    font-weight: 300;
+}
+
+.content_wrap {
+    width: 1200px;
+    padding: 0px 150px;
+    box-sizing: border-box;
+}
+
+.content_wrap ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    
+}
+
+.box .text {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(27, 27, 27);
+}
+
+.box .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent .number h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+}
+
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440; /*선 길이 꽉 채우기*/
+    stroke-linecap: round;
+    
+}
+
+.box .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.box .percent svg circle:nth-child(2) {
+    stroke-dashoffset: 440;
+    stroke: #16ff0e;
+}
+
+.box .percent.r1 svg circle:nth-child(2) {
+    animation: progressCircle 1s linear forwards;}
+.box .percent.r2 svg circle:nth-child(2) {
+    animation: progressCircle2 1s linear forwards;}
+.box .percent.r3 svg circle:nth-child(2) {
+    animation: progressCircle3 1s linear forwards;}
+
+@keyframes progressCircle {
+100% {stroke-dashoffset: 40;}}
+
+@keyframes progressCircle2 {
+    100% {stroke-dashoffset: 80;}}
+
+@keyframes progressCircle3 {
+        100% {stroke-dashoffset: 222;}}
+
+.box .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+}
